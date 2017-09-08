@@ -1,0 +1,12 @@
+{
+    "name": "allin1",
+    "description": "Chef recipe run-list for AIO",
+    "default_attributes": {
+    },
+    "run_list": [
+        "recipe[dependencies]",
+        "recipe[golang-package::install]"
+    ],
+    "chef_type": "role",
+    "json_class": "Chef::Role"
+}

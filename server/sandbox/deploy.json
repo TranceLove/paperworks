@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "debs": {
+            "mc": "latest",
+            "git": "latest"
+        }
+    }
+}

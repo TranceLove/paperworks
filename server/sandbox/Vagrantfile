@@ -1,0 +1,45 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+require 'json'
+
+VAGRANTFILE_API_VERSION = "2"
+CHEF_VERSION = "12.18.31" #As of Opsworks agent v4022
+SANDBOX_ROOT = File.dirname(__FILE__)
+
+WIPE_DB_ON_DESTROY = true
+
+#Load deploy JSON from separate file.
+#Technique referenced from https://github.com/le0pard/chef-solo-example/blob/master/Vagrantfile
+CHEF_JSON_FILE = "#{SANDBOX_ROOT}/deploy.json"
+CHEF_JSON = File.exists?(CHEF_JSON_FILE) ? JSON.parse(Pathname(CHEF_JSON_FILE).read) : {}
+
+Vagrant.require_version ">= 1.8.0"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+    config.omnibus.chef_version = CHEF_VERSION
+    config.berkshelf.enabled = true
+
+    config.vm.define :allin1 do |allin1|
+        allin1.vm.box = "bento/ubuntu-16.04"
+        allin1.vm.host_name = "paperworks"
+        allin1.vm.network "forwarded_port", guest: 3000, host: 3000
+        allin1.vm.network "forwarded_port", guest: 5432, host: 5432
+
+        allin1.vm.provider "virtualbox" do |vm|
+            vm.customize ["modifyvm", :id, "--name", "paperworks"]
+            vm.customize ["modifyvm", :id, "--cpus", 1]
+            vm.customize ["modifyvm", :id, "--memory", 2048]
+        end
+
+        allin1.vm.provision "chef_solo" do |chef|
+            chef.roles_path = "roles"
+            chef.add_role "allin1"
+            chef.json = CHEF_JSON
+        end
+
+        allin1.vm.synced_folder "..", "/vagrant"
+
+    end
+
+end

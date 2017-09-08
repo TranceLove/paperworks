@@ -1,0 +1,6 @@
+default["golang"]["version"] = "1.9"
+default["golang"]["download_url_prefix"] = "https://storage.googleapis.com/golang"
+default["golang"]["arch"] = "linux-amd64"
+default["golang"]["extract_to"] = "/usr/local"
+default["golang"]["dist_path"] = "#{node["golang"]["extract_to"]}/go"
+default["golang"]["binpath"] = "#{node["golang"]["dist_path"]}/bin"
