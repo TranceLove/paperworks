@@ -13,3 +13,12 @@ echo "PATH=$PATH:#{node["golang"]["binpath"]}" >> /etc/profile.d/apps-bin-path.s
 fi
     EOH
 end
+
+file node["golang"]["gopath_profile"] do
+  content "GOPATH=$HOME/.go"
+  mode '0644'
+  owner 'root'
+  group 'root'
+  action :create
+  not_if { ::File.exist?(node["golang"]["gopath_profile"]) }
+end
