@@ -9,7 +9,8 @@ export const Routes = StackNavigator({
     Login: {
         screen: Login,
         navigationOptions: {
-            title: "Login"
+            title: "Login",
+            header: null
         }
     }
     // },
