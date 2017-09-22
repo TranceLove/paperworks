@@ -19,7 +19,7 @@ export const Routes = StackNavigator({
         navigationOptions: {
             title: "Paperworks",
             left: null,
-            
+            header: null
         }
     }
     // Profile: {
