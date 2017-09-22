@@ -4,6 +4,7 @@ import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from "react-navigation"
 
 import Login from "./pages/login"
+import MainView from "./pages/mainview"
 
 export const Routes = StackNavigator({
     Login: {
@@ -12,14 +13,15 @@ export const Routes = StackNavigator({
             title: "Login",
             header: null
         }
+    },
+    MainView: {
+        screen: MainView,
+        navigationOptions: {
+            title: "Paperworks",
+            left: null,
+            
+        }
     }
-    // },
-    // MainView: {
-    //     screen: MainView,
-    //     navigationOptions: {
-    //         title: "Paperworks"
-    //     }
-    // },
     // Profile: {
     //     screen: Profile,
     //     navigationOptions: {

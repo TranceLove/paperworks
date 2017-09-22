@@ -23,6 +23,13 @@ let loginStyle = StyleSheet.create({
     }
 })
 
+let mainViewStyle = StyleSheet.create({
+    map: {
+        flex: 1
+    }
+})
+
 export const Styles = {
-    Login: loginStyle
+    Login: loginStyle,
+    MainView: mainViewStyle
 }

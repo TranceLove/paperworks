@@ -26,7 +26,7 @@ export default ({navigation}) => (
                 title="Continue without login"
                 icon={{name: 'map', type: 'entypo'}}
                 fontSize={19}
-                onPress={() => console.log("Pressed")}
+                onPress={() => navigation.navigate("MainView")}
             />
         </View>
     </View>
