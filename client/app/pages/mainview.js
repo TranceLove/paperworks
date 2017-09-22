@@ -1,18 +1,18 @@
 "use strict"
 
-import React from "react";
-import { Text, View, Card } from 'react-native';
-import { Button } from 'react-native-elements'
-import { Styles } from './../styles/styles'
-import MapView from 'react-native-maps';
-import ProfileService from './../services/ProfileService'
+import { DrawerNavigator } from "react-navigation"
+import MapView from './subpages/mapview'
+import ProfileView from './subpages/profile'
 
-export default ({navigation}) => (
-    <MapView style={Styles.MainView.map}
-        region={ProfileService.myLastLocation()}
-        showsCompass={true}
-        showsScale={true}
-        loadingEnabled={true}
-        onRegionChange={(region)=> console.log(region.latitudeDelta + ", " + region.longitudeDelta)}
-    />
-)
+let mainView = DrawerNavigator({
+    MapView: {
+        path: "/",
+        screen: MapView
+    },
+    ProfileView: {
+        path: "/profile",
+        screen: ProfileView
+    }
+})
+
+export default mainView
