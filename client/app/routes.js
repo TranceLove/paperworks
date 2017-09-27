@@ -17,17 +17,9 @@ export const Routes = StackNavigator({
     MainView: {
         screen: MainView,
         navigationOptions: {
-            title: "Paperworks",
-            left: null,
-            header: null
+            title: "Paperworks"
         }
     }
-    // Profile: {
-    //     screen: Profile,
-    //     navigationOptions: {
-    //         title: "Profile"
-    //     }
-    // }
 },{
     cardStyle: {
         paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
