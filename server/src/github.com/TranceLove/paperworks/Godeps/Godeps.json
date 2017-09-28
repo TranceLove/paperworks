@@ -1,0 +1,62 @@
+{
+	"ImportPath": "github.com/TranceLove/paperworks",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gin-contrib/sse",
+			"Rev": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v1.2-112-g5afc5b1",
+			"Rev": "5afc5b19730118c9b8324fe9dd995d44ec65c81a"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin/binding",
+			"Comment": "v1.2-112-g5afc5b1",
+			"Rev": "5afc5b19730118c9b8324fe9dd995d44ec65c81a"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin/json",
+			"Comment": "v1.2-112-g5afc5b1",
+			"Rev": "5afc5b19730118c9b8324fe9dd995d44ec65c81a"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin/render",
+			"Comment": "v1.2-112-g5afc5b1",
+			"Rev": "5afc5b19730118c9b8324fe9dd995d44ec65c81a"
+		},
+		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "130e6b02ab059e7b717a096f397c5b60111cae74"
+		},
+		{
+			"ImportPath": "github.com/json-iterator/go",
+			"Comment": "1.0.2-6-gabe3c40",
+			"Rev": "abe3c4016bd3f50fa9c5b0e909641e2b8370b0cf"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-isatty",
+			"Comment": "v0.0.3-1-ga5cdd64",
+			"Rev": "a5cdd64afdee435007ee3e9f6ed4684af949d568"
+		},
+		{
+			"ImportPath": "github.com/ugorji/go/codec",
+			"Rev": "54210f4e076c57f351166f0ed60e67d3fca57a36"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "314a259e304ff91bd6985da2a7149bbf91237993"
+		},
+		{
+			"ImportPath": "gopkg.in/go-playground/validator.v8",
+			"Comment": "v8.18.2",
+			"Rev": "5f1438d3fca68893a817e4a66806cea46a9e4ebf"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "eb3733d160e74a9c7e442f435eb3bea458e1d19f"
+		}
+	]
+}
