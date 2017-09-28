@@ -4,6 +4,11 @@
 	"GodepVersion": "v79",
 	"Deps": [
 		{
+			"ImportPath": "github.com/appleboy/gin-jwt",
+			"Comment": "v2.3.1-7-g16494d6",
+			"Rev": "16494d6a2cb32b6a8e316babf0048b7f90b1ffe5"
+		},
+		{
 			"ImportPath": "github.com/gin-contrib/sse",
 			"Rev": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae"
 		},
@@ -48,6 +53,11 @@
 		{
 			"ImportPath": "golang.org/x/sys/unix",
 			"Rev": "314a259e304ff91bd6985da2a7149bbf91237993"
+		},
+		{
+			"ImportPath": "gopkg.in/dgrijalva/jwt-go.v3",
+			"Comment": "v3.0.0",
+			"Rev": "d2709f9f1f31ebcda9651b03077758c1f3a0018c"
 		},
 		{
 			"ImportPath": "gopkg.in/go-playground/validator.v8",
