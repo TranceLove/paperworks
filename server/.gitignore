@@ -1,3 +1,4 @@
 pkg
 src/*
 !src/github.com/TranceLove
+bin
