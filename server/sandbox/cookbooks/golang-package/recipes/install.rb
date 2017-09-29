@@ -15,7 +15,10 @@ fi
 end
 
 file node["golang"]["gopath_profile"] do
-  content "GOPATH=$HOME/.go"
+  content <<-EOF
+GOPATH=#{node['golang']['default_gopath']}
+PATH=$GOPATH/bin:$PATH
+EOF
   mode '0644'
   owner 'root'
   group 'root'
