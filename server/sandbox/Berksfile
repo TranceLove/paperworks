@@ -3,5 +3,6 @@ source "https://supermarket.chef.io"
 cookbook 'packages', github:'aws/opsworks-cookbooks', branch:'release-chef-11.10', rel: 'packages'
 cookbook 'dependencies', github:'TranceLove/chef-dependencies', branch:'master'
 cookbook 'golang-package', path: 'cookbooks/golang-package'
+cookbook 'paperworks', path: 'cookbooks/paperworks'
 cookbook 'postgresql', '~> 6.1.1'
 cookbook 'tar', '~> 2.1.1'

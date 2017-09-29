@@ -8,5 +8,12 @@
     "golang": {
         "version": "1.9",
         "default_gopath": "/vagrant"
+    },
+    "postgresql": {
+        "version": "9.5",
+        "enable_pgdg_apt": true,
+        "password": {
+            "postgres": "postgres"
+        }
     }
 }
