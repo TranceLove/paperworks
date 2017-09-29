@@ -4,5 +4,8 @@
             "mc": "latest",
             "git": "latest"
         }
+    },
+    "golang": {
+        "version": "1.9"
     }
 }
