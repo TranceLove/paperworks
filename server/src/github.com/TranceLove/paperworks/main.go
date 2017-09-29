@@ -17,5 +17,5 @@ func main(){
 	r.GET("/hello", routes.Hello)
 	r.GET("/random-image", routes.RandomImage)
 
-    http.ListenAndServe(":8080", r)
+    http.ListenAndServe(":3000", r)
 }
