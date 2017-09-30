@@ -16,7 +16,7 @@ end
 
 file node["golang"]["gopath_profile"] do
   content <<-EOF
-GOPATH=#{node['golang']['default_gopath']}
+export GOPATH=#{node['golang']['default_gopath']}
 PATH=$GOPATH/bin:$PATH
 EOF
   mode '0644'
