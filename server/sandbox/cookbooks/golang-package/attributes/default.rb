@@ -11,3 +11,4 @@ default["golang"]["dep"]["download_url_prefix"] = "https://github.com/golang/dep
 default["golang"]["dep"]["download_filename"] = "dep-linux-amd64"
 default["golang"]["dep"]["binname"] = "dep"
 default["golang"]["dep"]["depnolock"] = false
+default["golang"]["goget"]["runas"] = "root"

@@ -6,7 +6,7 @@
     "run_list": [
         "recipe[dependencies]",
         "recipe[golang-package::install]",
-        "recipe[golang-package::install_dep]",
+        "recipe[golang-package::install_godep]",
         "recipe[postgresql::server]",
         "recipe[paperworks::createdb]"
     ],
