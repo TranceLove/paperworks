@@ -10,3 +10,4 @@ default["golang"]["dep"]["version"] = "0.3.1"
 default["golang"]["dep"]["download_url_prefix"] = "https://github.com/golang/dep/releases/download"
 default["golang"]["dep"]["download_filename"] = "dep-linux-amd64"
 default["golang"]["dep"]["binname"] = "dep"
+default["golang"]["dep"]["depnolock"] = false

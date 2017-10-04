@@ -17,7 +17,8 @@ end
 file node["golang"]["gopath_profile"] do
   content <<-EOF
 export GOPATH=#{node['golang']['default_gopath']}
-PATH=$GOPATH/bin:$PATH
+export DEPNOLOCK=#{true == node['golang']['dep']['depnolock'] ? "1" : "0"}
+export PATH=$GOPATH/bin:$PATH
 EOF
   mode '0644'
   owner 'root'
