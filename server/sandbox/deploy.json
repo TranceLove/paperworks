@@ -6,7 +6,7 @@
         }
     },
     "golang": {
-        "version": "1.9",
+        "version": "1.9.1",
         "default_gopath": "/vagrant",
         "dep": {
             "depnolock": true
