@@ -1,4 +1,4 @@
-package models
+package config
 
 import (
     "os"
@@ -9,14 +9,14 @@ import (
 )
 
 func TestConfigFileNotFound(t *testing.T){
-    _, ok := models.GetConfigurationFor("dev")
+    _, ok := config.GetConfigurationFor("dev")
     assert.False(t, ok)
 }
 
 func TestReadConfigFile(t *testing.T){
     cwd, _ := os.Getwd()
     os.Setenv("PAPERWORKS_CONFIG", fmt.Sprintf("%s/config1.json", cwd))
-    result, ok := models.GetConfigurationFor("dev")
+    result, ok := config.GetConfigurationFor("dev")
     assert.True(t, ok)
     assert.NotNil(t, result)
     assert.Equal(t, "localhost", result.DatabaseConfig.Host)
@@ -29,7 +29,7 @@ func TestReadConfigFile(t *testing.T){
 func TestReadConfigFile2(t *testing.T){
     cwd, _ := os.Getwd()
     os.Setenv("PAPERWORKS_CONFIG", fmt.Sprintf("%s/config2.json", cwd))
-    result, ok := models.GetConfigurationFor("dev")
+    result, ok := config.GetConfigurationFor("dev")
     assert.True(t, ok)
     assert.NotNil(t, result)
     assert.Equal(t, "localhost", result.DatabaseConfig.Host)
@@ -38,7 +38,7 @@ func TestReadConfigFile2(t *testing.T){
     assert.Equal(t, "postgres", result.DatabaseConfig.Username)
     assert.Equal(t, "postgres", result.DatabaseConfig.Password)
 
-    result, ok = models.GetConfigurationFor("staging")
+    result, ok = config.GetConfigurationFor("staging")
     assert.True(t, ok)
     assert.NotNil(t, result)
     assert.Equal(t, "12-34-56-78.pgsql.rds.amazonaws.com", result.DatabaseConfig.Host)
@@ -47,7 +47,7 @@ func TestReadConfigFile2(t *testing.T){
     assert.Equal(t, "postadmina", result.DatabaseConfig.Username)
     assert.Equal(t, "w3s7G0", result.DatabaseConfig.Password)
 
-    result, ok = models.GetConfigurationFor("production")
+    result, ok = config.GetConfigurationFor("production")
     assert.True(t, ok)
     assert.NotNil(t, result)
     assert.Equal(t, "12-34-56-78.pgsql.rds.amazonaws.com", result.DatabaseConfig.Host)
