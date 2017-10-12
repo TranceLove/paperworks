@@ -1,0 +1,29 @@
+{
+    "dev": {
+        "databaseConfig": {
+            "host": "localhost",
+            "port": 5432,
+            "databaseName": "paperworks",
+            "username": "postgres",
+            "password": "postgres"
+        }
+    },
+    "staging": {
+        "databaseConfig": {
+            "host": "12-34-56-78.pgsql.rds.amazonaws.com",
+            "port": 25432,
+            "databaseName": "paperworks-staging",
+            "username": "postadmina",
+            "password": "w3s7G0"
+        }
+    },
+    "production": {
+        "databaseConfig": {
+            "host": "12-34-56-78.pgsql.rds.amazonaws.com",
+            "port": 55432,
+            "databaseName": "paperworks-production",
+            "username": "postadmina",
+            "password": "F7ju6sU#=="
+        }
+    }
+}
