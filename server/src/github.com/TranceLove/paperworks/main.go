@@ -4,12 +4,16 @@ import (
 	// "os"
 	"net/http"
 
+	"github.com/TranceLove/paperworks/db"
 	"github.com/gin-gonic/gin"
 	"github.com/TranceLove/paperworks/routes"
 	// "github.com/appleboy/gin-jwt"
 )
 
 func main(){
+
+	db.Init()
+
 	r := gin.New()
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
