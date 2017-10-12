@@ -4,11 +4,6 @@
 	"GodepVersion": "v79",
 	"Deps": [
 		{
-			"ImportPath": "github.com/appleboy/gin-jwt",
-			"Comment": "v2.3.1-7-g16494d6",
-			"Rev": "16494d6a2cb32b6a8e316babf0048b7f90b1ffe5"
-		},
-		{
 			"ImportPath": "github.com/gin-contrib/sse",
 			"Rev": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae"
 		},
@@ -33,6 +28,20 @@
 			"Rev": "5afc5b19730118c9b8324fe9dd995d44ec65c81a"
 		},
 		{
+			"ImportPath": "github.com/go-xorm/builder",
+			"Rev": "c8871c857d2555fbfbd8524f895be5386d3d8836"
+		},
+		{
+			"ImportPath": "github.com/go-xorm/core",
+			"Comment": "v0.5.7",
+			"Rev": "da1adaf7a28ca792961721a34e6e04945200c890"
+		},
+		{
+			"ImportPath": "github.com/go-xorm/xorm",
+			"Comment": "v0.6.3-19-g29d4a03",
+			"Rev": "29d4a0330a00b9be468b70e3fb0f74109348c358"
+		},
+		{
 			"ImportPath": "github.com/golang/protobuf/proto",
 			"Rev": "130e6b02ab059e7b717a096f397c5b60111cae74"
 		},
@@ -40,6 +49,16 @@
 			"ImportPath": "github.com/json-iterator/go",
 			"Comment": "1.0.2-6-gabe3c40",
 			"Rev": "abe3c4016bd3f50fa9c5b0e909641e2b8370b0cf"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-185-g017e4c1",
+			"Rev": "017e4c14d80628353eaee677a1aeffe47a10c0dc"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/oid",
+			"Comment": "go1.0-cutoff-185-g017e4c1",
+			"Rev": "017e4c14d80628353eaee677a1aeffe47a10c0dc"
 		},
 		{
 			"ImportPath": "github.com/mattn/go-isatty",
@@ -53,11 +72,6 @@
 		{
 			"ImportPath": "golang.org/x/sys/unix",
 			"Rev": "314a259e304ff91bd6985da2a7149bbf91237993"
-		},
-		{
-			"ImportPath": "gopkg.in/dgrijalva/jwt-go.v3",
-			"Comment": "v3.0.0",
-			"Rev": "d2709f9f1f31ebcda9651b03077758c1f3a0018c"
 		},
 		{
 			"ImportPath": "gopkg.in/go-playground/validator.v8",
