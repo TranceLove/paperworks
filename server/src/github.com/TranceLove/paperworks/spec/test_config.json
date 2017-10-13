@@ -1,0 +1,11 @@
+{
+    "test": {
+        "databaseConfig": {
+            "host": "localhost",
+            "port": 5432,
+            "databaseName": "paperworks_test",
+            "username": "postgres",
+            "password": "postgres"
+        }
+    }
+}
