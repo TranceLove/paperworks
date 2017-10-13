@@ -8,7 +8,8 @@
         "recipe[golang-package::install]",
         "recipe[golang-package::install_godep]",
         "recipe[postgresql::server]",
-        "recipe[paperworks::createdb]"
+        "recipe[paperworks::createdb]",
+        "recipe[paperworks::create_testdb]"
     ],
     "chef_type": "role",
     "json_class": "Chef::Role"
