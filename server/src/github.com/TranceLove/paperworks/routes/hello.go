@@ -5,7 +5,7 @@ import (
     "github.com/gin-gonic/gin"
 )
 
-func Hello(c *gin.Context) {
+func hello(c *gin.Context) {
     c.JSON(200, gin.H{
         "message": "Hello World",
         "time": time.Now(),

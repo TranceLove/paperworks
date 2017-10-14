@@ -8,7 +8,7 @@ import (
     "github.com/gin-gonic/gin"
 )
 
-func RandomImage(c *gin.Context) {
+func randomImage(c *gin.Context) {
     // From: http://41j.com/blog/2015/03/creating-a-png-image-in-golang/
 
     myimage := image.NewRGBA(image.Rectangle{image.Point{0,0},image.Point{200,200}})
