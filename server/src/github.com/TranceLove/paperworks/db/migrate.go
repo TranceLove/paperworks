@@ -12,6 +12,8 @@ func Migrate(){
     go ExecuteGormTemplate(func(engine *gorm.DB) {
         fmt.Println("Start schema migration")
         engine.AutoMigrate(&models.User{})
+        engine.Model(&models.User{}).ModifyColumn("device_id", "character varying(255)")
+        engine.Exec("ALTER TABLE users ALTER COLUMN device_id SET NOT NULL;")
         ch <- "OK"
         close(ch)
     })

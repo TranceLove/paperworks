@@ -39,16 +39,26 @@ func (suite *UserTestSuite) TestCreateAndFindUser(){
 
     db.ExecuteGormTemplate(func(engine *gorm.DB) {
         user := models.User {
-            Device_id: "1234567890",
+            DeviceId: "1234567890",
             Username: "TranceLove",
+            OsType: "android",
         }
 
         engine.Create(&user)
 
         var result models.User
-        engine.Where(&models.User{Device_id:"1234567890"}).First(&result)
+        engine.Where(&models.User{DeviceId:"1234567890"}).First(&result)
         suite.NotNil(result)
-        suite.Equal(user.Device_id, result.Device_id)
+        suite.Equal(user.DeviceId, result.DeviceId)
+        suite.Equal(user.Username, result.Username)
+        suite.Equal(user.OsType, result.OsType)
+
+        id := result.ID
+
+        engine.Where("id = ?", id).First(&result)
+        suite.Equal(user.DeviceId, result.DeviceId)
+        suite.Equal(user.Username, result.Username)
+        suite.Equal(user.OsType, result.OsType)
     })
 }
 
