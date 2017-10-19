@@ -6,7 +6,7 @@ import (
 )
 
 func hello(c *gin.Context) {
-
+    setJsonApiResponseContentType(c)
     c.JSON(200, gin.H{
         "data": gin.H{
             "message": "Hello World",

@@ -11,3 +11,7 @@ func verifyRequestValidity(c *gin.Context){
         return
     }
 }
+
+func setJsonApiResponseContentType(c *gin.Context){
+    c.Header(CONTENT_TYPE_HEADER, CONTENT_TYPE_JSON_API)
+}

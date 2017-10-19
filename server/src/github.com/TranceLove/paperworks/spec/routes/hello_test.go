@@ -43,6 +43,7 @@ func (suite *HelloTestSuite) TestHello(){
             "Content-Type": routes.CONTENT_TYPE_JSON_API,
         }).
 		Run(routes.Init(), func(r gofight.HTTPResponse, rq gofight.HTTPRequest) {
+            suite.Equal(routes.CONTENT_TYPE_JSON_API, rq.Header.Get(routes.CONTENT_TYPE_HEADER))
 			suite.Equal(http.StatusOK, r.Code)
             verify, _ := jsonparser.GetString([]byte(r.Body.String()), "data", "message")
             suite.Equal("Hello World", verify)
