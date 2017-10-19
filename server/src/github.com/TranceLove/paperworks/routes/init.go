@@ -5,6 +5,7 @@ import (
 )
 
 const (
+    CONTENT_TYPE_HEADER string = "Content-Type"
     CONTENT_TYPE_JSON_API string = "application/vnd.api+json"
 )
 
