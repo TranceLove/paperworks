@@ -39,9 +39,12 @@ func (suite *HelloTestSuite) TestHello(){
 
     r.GET("/hello").
 		SetDebug(true).
+        SetHeader(gofight.H{
+            "Content-Type": routes.CONTENT_TYPE_JSON_API,
+        }).
 		Run(routes.Init(), func(r gofight.HTTPResponse, rq gofight.HTTPRequest) {
 			suite.Equal(http.StatusOK, r.Code)
-            verify, _ := jsonparser.GetString([]byte(r.Body.String()), "message")
+            verify, _ := jsonparser.GetString([]byte(r.Body.String()), "data", "message")
             suite.Equal("Hello World", verify)
     })
 }

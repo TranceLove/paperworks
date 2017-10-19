@@ -6,8 +6,11 @@ import (
 )
 
 func hello(c *gin.Context) {
+
     c.JSON(200, gin.H{
-        "message": "Hello World",
-        "time": time.Now(),
+        "data": gin.H{
+            "message": "Hello World",
+            "time": time.Now(),
+        },
     })
 }
