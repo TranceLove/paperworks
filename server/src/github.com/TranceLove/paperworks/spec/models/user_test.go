@@ -40,6 +40,7 @@ func (suite *UserTestSuite) TestCreateAndFindUser(){
     db.ExecuteGormTemplate(func(engine *gorm.DB) {
         user := models.User {
             DeviceId: "1234567890",
+            DeviceUdid: "abcdefghijkl",
             Username: "TranceLove",
             OsType: "android",
         }
@@ -50,6 +51,7 @@ func (suite *UserTestSuite) TestCreateAndFindUser(){
         engine.Where(&models.User{DeviceId:"1234567890"}).First(&result)
         suite.NotNil(result)
         suite.Equal(user.DeviceId, result.DeviceId)
+        suite.Equal(user.DeviceUdid, result.DeviceUdid)
         suite.Equal(user.Username, result.Username)
         suite.Equal(user.OsType, result.OsType)
 
@@ -57,6 +59,7 @@ func (suite *UserTestSuite) TestCreateAndFindUser(){
 
         engine.Where("id = ?", id).First(&result)
         suite.Equal(user.DeviceId, result.DeviceId)
+        suite.Equal(user.DeviceUdid, result.DeviceUdid)
         suite.Equal(user.Username, result.Username)
         suite.Equal(user.OsType, result.OsType)
     })
