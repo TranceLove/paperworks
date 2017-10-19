@@ -12,3 +12,7 @@ type User struct {
     OsType string `gorm:"size:32;not null;default:'Unknown'"`
     Role string `gorm:"size:16;not null;default:''"`
 }
+
+func (u *User) TableName() string {
+    return "users"
+}
