@@ -5,6 +5,9 @@ import { StackNavigator } from "react-navigation"
 
 import Login from "./pages/login"
 import MainView from "./pages/mainview"
+import SelectServer from "./pages/selectserver"
+
+export const RoutesDev = SelectServer
 
 export const Routes = StackNavigator({
     Login: {

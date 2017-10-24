@@ -1,10 +1,11 @@
 import React from 'react';
-import { Routes } from './routes';
+import { Routes, RoutesDev } from './routes';
 
 export default class PaperWorkApp extends React.Component
 {
     render()
     {
-        return <Routes/>
+        const isDev = true
+        return (isDev ? (<RoutesDev/>) : (<Routes/>))
     }
 }
