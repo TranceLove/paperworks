@@ -11,7 +11,7 @@ class SelectServerView extends React.Component
 {
     static navigationOptions = {}
 
-    setServer(serverName)
+    setServer(serverName:String)
     {
         Environment.set("serverName", serverName)
         this.props.navigation.dispatch(NavigationActions.reset({
