@@ -7,9 +7,16 @@ import Login from "./pages/login"
 import MainView from "./pages/mainview"
 import SelectServer from "./pages/selectserver"
 
-export const RoutesDev = SelectServer
+const isDev = true
 
 export const Routes = StackNavigator({
+    SelectServer: {
+        screen: SelectServer,
+        navigationOptions: {
+            title: "Select Server",
+            header: null
+        }
+    },
     Login: {
         screen: Login,
         navigationOptions: {
@@ -24,6 +31,7 @@ export const Routes = StackNavigator({
         }
     }
 },{
+    initialRouteName: isDev ? "SelectServer" : "Login",
     cardStyle: {
         paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
     }
